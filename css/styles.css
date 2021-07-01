@@ -35,6 +35,7 @@ body {
 ul {
   list-style: none;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -66,6 +67,14 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 50px;
+}
+
+.pre-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .logo,
@@ -252,12 +261,7 @@ img {
   flex-flow: row wrap;
 }
 
-.advant {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+.advantages .pre-title {
   margin-bottom: 10px;
 }
 
@@ -289,6 +293,26 @@ img {
 
 .info .info-img:not(:last-child) {
   margin-right: 30px;
+}
+
+.info .info-img {
+  position: relative;
+}
+
+.info .info-img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  min-height: 70px;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.info-img .pre-title {
+  position: absolute;
+  bottom: 27px;
+  left: calc(100% / 4.5);
+  color: var(--white-color);
 }
 
 /* team */
