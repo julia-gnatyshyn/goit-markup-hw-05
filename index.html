@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+ 
 </head>
 <body>
     <!--Шапка сайта-->
@@ -49,7 +50,7 @@
     <section class="hero">
         <div class="container">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="hero-button" type="button">Заказать услугу</button> 
+        <button data-modal-open class="hero-button" type="button">Заказать услугу</button> 
         </div>
     </section>
 
@@ -349,5 +350,17 @@
             </div>
         </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+        <button data-modal-close type="button" > 
+            <svg class="close" width=30px, height=30px>
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        </div>
+    </div>
+<script src="./js/modal.js"></script> 
+
 </body>
 </html>
