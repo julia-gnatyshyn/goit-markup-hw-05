@@ -133,6 +133,7 @@ img {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link .active::after {
@@ -163,10 +164,10 @@ img {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link .icons {
-  fill: var(--text-color);
   margin-right: 10px;
 }
 
@@ -178,15 +179,13 @@ img {
 .nav .nav-link a:focus,
 .nav .nav-link a:active {
   color: var(--blue-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact .contact-link a:hover,
-.contact .contact-link a:focus,
-.contact .contact-link a:active {
+.contact-link a:hover,
+.contact-link a:focus,
+.contact-link a:active {
   color: var(--blue-color);
-  stroke: var(--blue-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--blue-color);
 }
 
 /* hero */
@@ -235,12 +234,12 @@ img {
   cursor: pointer;
   display: inline-block;
   min-width: 200px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
 .hero-button:focus {
   color: var(--main-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* advantages */
 
@@ -313,6 +312,7 @@ img {
   bottom: 0;
   background: rgba(47, 48, 58, 0.8);
   opacity: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info-img .pre-title {
@@ -320,16 +320,15 @@ img {
   bottom: 27px;
   color: var(--white-color);
   opacity: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info-img:hover ::before {
   opacity: 1;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info-img:hover .pre-title {
   opacity: 1;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* team */
@@ -399,11 +398,13 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social a {
   fill: var(--text-color);
   padding: 12px 11.97px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social li:not(:last-child) {
@@ -414,14 +415,12 @@ img {
 .social li:focus,
 .social li:active {
   background-color: var(--blue-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social a:hover,
 .social a:focus,
 .social a:active {
   fill: var(--white-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* clients */
@@ -440,6 +439,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients .title {
@@ -461,7 +461,6 @@ img {
 .clients-list a:active {
   fill: var(--blue-color);
   border-color: var(--blue-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* footer */
@@ -501,11 +500,14 @@ img {
   color: var(--white-color);
 }
 
-.address .contact-link:hover,
-.address .contact-link:focus,
-.address .contact-link:active {
-  color: var(--blue-color);
+.address li:not(:first-child) {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address li:not(:first-child):hover,
+.address li:not(:first-child):focus,
+.address li:not(:first-child):active {
+  color: var(--blue-color);
 }
 
 /* join us */
@@ -528,6 +530,7 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-join li:not(:last-child) {
@@ -549,7 +552,6 @@ img {
 .social-join li:focus,
 .social-join li:active {
   background-color: var(--blue-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* portfolio */
@@ -571,6 +573,7 @@ img {
   cursor: pointer;
   display: inline-block;
   text-align: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons {
@@ -591,7 +594,6 @@ img {
   background-color: var(--blue-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .p-title {
@@ -630,10 +632,10 @@ img {
 
   width: 100%;
   height: 294px;
-  opacity: 0;
-  overflow: hidden;
 
   background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .techno {
@@ -641,14 +643,16 @@ img {
   top: 63px;
   left: 24px;
   right: 24px;
-  opacity: 0;
-  overflow: hidden;
+
+  height: 294px;
 
   font-weight: normal;
   font-size: 18px;
   line-height: 1.555;
   letter-spacing: 0.03em;
   color: var(--white-color);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects > li {
@@ -656,24 +660,16 @@ img {
   flex-basis: calc(100% / 3 -30px);
   margin-right: 30px;
   margin-bottom: 30px;
-}
-
-@keyframes anim {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects li:hover ::before {
   opacity: 1;
-  animation: anim 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0%);
 }
 .projects li:hover .techno {
   opacity: 1;
-  animation: anim 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0%);
 }
 
 .projects > li:hover,
@@ -681,7 +677,6 @@ img {
 .projects > li:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects .content {
@@ -711,6 +706,7 @@ img {
   opacity: 1;
   transition: opacity 250ms linear;
 }
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -723,7 +719,6 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  transition: 250ms;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -747,10 +742,10 @@ img {
 .close {
   stroke: rgba(0, 0, 0, 0.1);
   fill: var(--main-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close:hover,
 .close:focus,
 .close:active {
   stroke: var(--blue-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
